@@ -8,8 +8,8 @@ To be used as backend for next gen explorers, rpc servers, dApps API...
 
 ## State
 
-0 - Planning
+1 - Planning
 
 ## Contributors
 
-You are welcome to list your competences and how you'd like to help, just PR to Contributors.md
+You are welcome to list your competences and how you'd like to help, just PR to https://github.com/Open-Nyzo/Open-Nyzo-Projects/blob/master/Open-DB/contributors.md
