@@ -14,11 +14,11 @@ Please issue a PR to add yourself.
 
 ## Sample Entry
 
-@user_handle (github)
+@user_handle (github)  
 Discord @discord_handle (optional)
 
-Languages: Python
-Experience: Beginner, back end code.
-Stages: 3, 5, 6
-Comments: blah blah
+Languages: Python  
+Experience: Beginner, back end code.  
+Stages: 3, 5, 6  
+Comments: blah blah  
 
