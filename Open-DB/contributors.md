@@ -5,11 +5,11 @@ Please issue a PR to add yourself.
 
 ## Stages
 
-1 - Planning
-2 - Analysis
-3 - Design
-4 - Development and implementation
-5 - Testing
+1 - Planning  
+2 - Analysis  
+3 - Design  
+4 - Development and implementation  
+5 - Testing  
 6 - Maintenance
 
 ## Sample Entry
