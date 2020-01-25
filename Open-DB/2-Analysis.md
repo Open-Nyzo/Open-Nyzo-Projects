@@ -31,6 +31,10 @@ Engines that would write/feed into this DB - as well as client apps that would r
 - Query transactions by data
 - Limit to some block range
 
+### B3. Bitcoin like Json/RPC interface
+
+WIP - requirements in terms of data/requests to be added.
+
 ## C. Potential DB Feeder apps
 
 - Monk's Go implementation
