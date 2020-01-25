@@ -10,6 +10,6 @@ To be used as backend for next gen explorers, rpc servers, dApps API...
 
 0 - Planning
 
-## Contributors
+## Contributors
 
 You are welcome to list your competences and how you'd like to help, just PR to Contributors.md
