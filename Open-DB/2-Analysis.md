@@ -14,7 +14,7 @@ Engines that would write/feed into this DB - as well as client apps that would r
 - Non nonsense structure
 - Documented
 
-## B. Possible uses
+## B. Possible uses
 
 ### B1. Explorer  
 
@@ -36,3 +36,8 @@ Engines that would write/feed into this DB - as well as client apps that would r
 - Monk's Go implementation
 - Potential Jyson/nyzo client feeder by Eggdrasyl
 - 
+
+## D. Open questions/concerns
+
+- space/computation arbitrage. Fees/Balances/votes history ?
+- cycles txns?
