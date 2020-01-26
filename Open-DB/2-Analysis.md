@@ -35,6 +35,11 @@ Engines that would write/feed into this DB - as well as client apps that would r
 
 WIP - requirements in terms of data/requests to be added.
 
+### B4. Cycle events logging
+
+Maintain a searchable history of cycle events for future analysis and anomalies detection.  
+cycle info, votes, joins, leaves
+
 ## C. Potential DB Feeder apps
 
 - Monk's Go implementation
