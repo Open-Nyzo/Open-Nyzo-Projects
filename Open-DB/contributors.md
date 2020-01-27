@@ -40,9 +40,11 @@ Please issue a PR to add yourself.
   Stages: 7
   Comments: I'm not a blockchain developer. But, I can go up in skill and I can contribute to the code.     
   
-  -[x00x0x00x](https://github.com/x00x0x00x)
-   Discord @Snipe#6069
-   
+- [x00x0x00x](https://github.com/x00x0x00x)
+
+  Discord @Snipe#6069
+  
+  
    Languages: HTML, CSS, JS, Python, PHP (little bit of Java)
    Experience: Made analytics platform, used PHP, MySQL, Redis server, BS4, analysis architecture (gathering, analysis and post-processing) - Tor (gathering) and API protocol constructs (gathering), Data storage using Elasticsearch and Kibana (analysis), post-processing with python, developed APIs to establish connections between servers to facilitate cluster analyses. Discord orderbook bot for Nyzo. Node-manager for nyzo (forked from Ortis for Mochimo). Gateway for nyzo (which was abandoned due to legal reasons). Redcog Bot cog coding. I created an explorer for nyzo in html,css,js from scratch using websockets. 
    
