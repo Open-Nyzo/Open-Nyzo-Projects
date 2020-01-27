@@ -14,12 +14,12 @@ Please issue a PR to add yourself.
 
 ## Sample Entry
 
-- @user_handle (github)  
-  Discord @discord_handle (optional)
+- @GITAZZOUZ (github)  
+  Discord @konan5236 (optional)
 
-  Languages: Python  
-  Experience: Beginner, back end code.  
-  Stages: 3, 5, 6  
+  Languages: PHP, JAVA, JS, ANGULAR, MYSQL  
+  Experience: Full Stack 
+  Stages: 7 
   Comments: blah blah  
   
 ## Contributor List
@@ -28,6 +28,6 @@ Please issue a PR to add yourself.
   Discord @davey#9988
 
   Languages: JavaScript (nodeJS and in browser), php, css  
-  Experience: Frontend developer for 5+ years. Working in creative agencies building custom WordPress websites. Using nodeJS, React, next.js, Express & graphQL in sideprojects.  
-  Stages: 1, 2, 4, 6  
-  Comments: I'm not a DB or blockchain developer. Contributions here will probably be not all that technical. But, I can potentially contribute to the code with some guidance.     
+  Experience: Frontend/Backend developer for 7+ years. Working in creative agencies building custom applications. Using PHP-Symfony, Angular, c#, JAVA, MySQL... in sideprojects.  
+  Stages: 7
+  Comments: I'm not a DB or blockchain developer. But,but I can go up in skill and I can contribute to the code with some guidance.     
