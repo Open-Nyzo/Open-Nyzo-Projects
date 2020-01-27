@@ -46,8 +46,11 @@ Please issue a PR to add yourself.
   
   
    Languages: HTML, CSS, JS, Python, PHP (little bit of Java)
+   
    Experience: Made analytics platform, used PHP, MySQL, Redis server, BS4, analysis architecture (gathering, analysis and post-processing) - Tor (gathering) and API protocol constructs (gathering), Data storage using Elasticsearch and Kibana (analysis), post-processing with python, developed APIs to establish connections between servers to facilitate cluster analyses. Discord orderbook bot for Nyzo. Node-manager for nyzo (forked from Ortis for Mochimo). Gateway for nyzo (which was abandoned due to legal reasons). Redcog Bot cog coding. I created an explorer for nyzo in html,css,js from scratch using websockets. 
    
+   
    Using Open Nyzo would be great to facilitate proper network data entries for the explorer, instead of the nyzo.co scraping which is happening right now. The richlist will be derived from the actual balance list and not the one on nyzo.co. The cycle info will be derived from the node directly. A new website for nyzo.net is currently in the works (proper packaging).
+   
    
    Stages: 1,2,3,4,5,6
