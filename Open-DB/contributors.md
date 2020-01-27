@@ -35,7 +35,7 @@ Please issue a PR to add yourself.
 - [GITAZZOUZ](https://github.com/GITAZZOUZ)  
   Discord @konan#5236
 
-  Languages: PHP, JAVA, JS, ANGULAR, MYSQL  
+  Languages: PHP-Symfony, JAVA, JS, ANGULAR, MYSQL, C#  
   Experience: Frontend/Backend developer for 7+ years. Working in creative agencies building custom applications. Using PHP-Symfony, Angular, c#, JAVA, MySQL... in sideprojects.  
   Stages: 7
   Comments: I'm not a DB or blockchain developer. But, I can go up in skill and I can contribute to the code with some guidance.     
