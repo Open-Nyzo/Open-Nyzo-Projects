@@ -16,6 +16,7 @@ A4- A small portion of verifiers are elected to be part of the cycle.
 A5- in cycle verifiers take turn to forge blocks, and earn rewards from transactions fees
 
 * A2: No PoS, you don't need any nyzo to run a verifier
+* A3: the mesh is composed of "the cycle" and "the queue".
 * A4: the cycle votes for new verifiers at specific time interval
 * A5: no PoW, no halving, no emission. All nyzos exists since the beginning, rewards come from seed account and fees only.
 
