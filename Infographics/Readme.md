@@ -29,18 +29,18 @@ B5 - The verifier is now part of the cycle and will get rewards
 B6 - If a verifier does not forge a block when it's its turn, he drops out of the cycle  
 B7 - If a verifier exhibits consistent bad performance metrics, he can be voted out of the cycle  
 
-* B2: The Verifier has to keep the same IPv4 address or the timer resets.
+* B2: The Verifier has to keep the same IPv4 address or the timer resets.  
 * B5: once in cycle, the verifier can change IP once per cycle.
 
-## C. Verifiers and sentinels
+## C. Verifiers and sentinels
 
-C1 - Sentinels are fallbacks for - in queue and in cycle - verifiers.
-C2 - One sentinel can watch over several verifiers (like, 100)
-C3 - A sentinel can produce a join message on behalf on an in-queue verifier elected for the cycle
-C4 - A sentinel can produce a block on behalf on an in-cycle verifier.
-C5 - In practice, a sentinel is required as soon as a verifier enters the lottery time.
+C1 - Sentinels are fallbacks for - in queue and in cycle - verifiers.  
+C2 - One sentinel can watch over several verifiers (like, 100)  
+C3 - A sentinel can produce a join message on behalf on an in-queue verifier elected for the cycle  
+C4 - A sentinel can produce a block on behalf on an in-cycle verifier.  
+C5 - In practice, a sentinel is required as soon as a verifier enters the lottery time.  
 
-* C1: As such, they are to be hosted on a different machine/host to be effective
+* C1: As such, they are to be hosted on a different machine/host to be effective  
 * C2: Sentinel IP has to be whitelosted on the verifiers it protects
 
 # More (infographics or tutos)
