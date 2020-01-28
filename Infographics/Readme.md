@@ -32,6 +32,8 @@ B7 - If a verifier exhibits consistent bad performance metrics, he can be voted 
 * B2: The Verifier has to keep the same IPv4 address or the timer resets.  
 * B5: once in cycle, the verifier can change IP once per cycle.
 
+> This one can be some kind of timeline
+
 ## C. Verifiers and sentinels
 
 C1 - Sentinels are fallbacks for - in queue and in cycle - verifiers.  
@@ -45,17 +47,17 @@ C5 - In practice, a sentinel is required as soon as a verifier enters the lotter
 
 # More (infographics or tutos)
 
-## Best practices
+## Best practices
 
 ## How to enter the cycle
 
 ## Make sure a verifier runs
 
-## Fees and rewards
+## Fees and rewards
 
 ## Circulating supply
 
-## Wallets, Keys and nyzostrings
+## Wallets, Keys and nyzostrings
 
 ## Verifier config files
 
