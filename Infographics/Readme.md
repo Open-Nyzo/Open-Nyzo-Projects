@@ -66,3 +66,4 @@ C5 - In practice, a sentinel is required as soon as a verifier enters the lotter
 
 ## Understand sentinel logs
 
+Test
