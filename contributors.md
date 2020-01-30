@@ -1,6 +1,6 @@
-# Open DB - Contributors
+# Open Nyzo - Contributors
 
-This is to keep track of developers willing to participate in this project.  
+This is to keep track of developers willing to participate in open Nyzo projects.  
 Please issue a PR to add yourself.
 
 ## Stages
