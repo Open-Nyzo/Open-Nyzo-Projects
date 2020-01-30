@@ -40,17 +40,23 @@ Please issue a PR to add yourself.
   Stages: 7
   Comments: I'm not a blockchain developer. But, I can go up in skill and I can contribute to the code.     
   
-- [x00x0x00x](https://github.com/x00x0x00x)
-
+- [x00x0x00x](https://github.com/x00x0x00x)  
   Discord @Snipe#6069
   
-  
-   Languages: HTML, CSS, JS, Python, PHP (little bit of Java)
+   Languages: HTML, CSS, JS, Python, PHP (little bit of Java)  
    
    Experience: Made analytics platform, used PHP, MySQL, Redis server, BS4, analysis architecture (gathering, analysis and post-processing) - Tor (gathering) and API protocol constructs (gathering), Data storage using Elasticsearch and Kibana (analysis), post-processing with python, developed APIs to establish connections between servers to facilitate cluster analyses. Discord orderbook bot for Nyzo. Node-manager for nyzo (forked from Ortis for Mochimo). Gateway for nyzo (which was abandoned due to legal reasons). Redcog Bot cog coding. I created an explorer for nyzo in html,css,js from scratch using websockets. 
-   
-   
+    
    Using Open Nyzo would be great to facilitate proper network data entries for the explorer, instead of the nyzo.co scraping which is happening right now. The richlist will be derived from the actual balance list and not the one on nyzo.co. The cycle info will be derived from the node directly. A new website for nyzo.net is currently in the works (proper packaging).
-   
-   
+    
    Stages: 1,2,3,4,5,6
+
+- [EggPool](https://github.com/EggPool)  
+  Discord @NyzoSy - @SySy#5290
+
+  Languages: Python, PHP, Light Javascript, MYSQL, HTML, CSS, and less useful ones.  
+  Experience: 20 years of custom application development, web apps, Wordpress, E-commerce, SaaS, technical tools. Now deep into custom codebase crypto. My first sats where mined with CPU!  
+  Stages: 1 - 6  
+  Comments: I have more of a global view than a specialist one. I specially like the design stage.   
+My goal here is to aggregate the devs goodwill and provide them with a nice place where they feel home, so we can build open nyzo ecosystem in a non nonsense and collaborative way.     
+  
