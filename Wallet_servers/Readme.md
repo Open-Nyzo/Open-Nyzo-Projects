@@ -14,7 +14,7 @@ Provide a simple to install and configure wallet server that users can run to pr
 - Eases onboarding
 - stable and maintained wallet servers could end up rewarded by community funds
 
-## Potential features
+## Potential features
 
 - json/rpc api
 - websocket api
