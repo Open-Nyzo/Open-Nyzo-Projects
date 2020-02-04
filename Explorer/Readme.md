@@ -12,14 +12,14 @@ This page is more of a conversation starter and desired features list than a ful
 
 ## Core features
 
-    - list last blocks
-    - list transactions and their type
-    - get balance for a given address
-    - list (last?) transactions of an address
-    - lookup a transaction by its txid
+  - list last blocks
+  - list transactions and their type
+  - get balance for a given address
+  - list (last?) transactions of an address
+  - lookup a transaction by its txid
 
-    - auto install script
-    - Docker image
+  - auto install script
+  - Docker image
     
 ## coinomics features
 
@@ -29,24 +29,24 @@ This page is more of a conversation starter and desired features list than a ful
   - cycle transactions and voting stats
   - ...
     
-## Extra features
+## Extra features
 
-- overall statistics avg tx/block, /day. avg nyzo per tx...
-- cycle events
-- Http API endpoints
-- Skins/templates
-- i18n/l10n
+  - overall statistics avg tx/block, /day. avg nyzo per tx...
+  - cycle events
+  - Http API endpoints
+  - Skins/templates
+  - i18n/l10n
 
 ## Requirements
 
-    - Needs devs - Frontend mostly
-    - Relies on [Open-db](https://github.com/Open-Nyzo/Open-Nyzo-Projects/blob/master/Open-DB)
+  - Needs devs - Frontend mostly
+  - Relies on [Open-db](https://github.com/Open-Nyzo/Open-Nyzo-Projects/blob/master/Open-DB)
     
 ## Current explorers
 
-- Official website with some explorer features [Nyzo.co](https://nyzo.co/)
-- WIP [Explorer by Snipe](https://explorer.nyzo.net/)
-- Older explorer, state and licence unknown [http://nyzo-explorer.com](http://nyzo-explorer.com/)
+  - Official website with some explorer features [Nyzo.co](https://nyzo.co/)
+  - WIP [Explorer by Snipe](https://explorer.nyzo.net/)
+  - Older explorer, state and licence unknown [http://nyzo-explorer.com](http://nyzo-explorer.com/)
 
 ## Contributors and how to help
 
