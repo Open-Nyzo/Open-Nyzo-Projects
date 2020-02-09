@@ -37,7 +37,7 @@ Please issue a PR to add yourself.
 
   Languages: PHP-Symfony, JAVA, JS, ANGULAR, MYSQL, C#  
   Experience: Frontend/Backend developer for 7+ years. Working in creative agencies building custom applications. Using PHP-Symfony, Angular, c#, JAVA, MySQL... in sideprojects.  
-  Stages: 7
+  Stages: 2, 4, 5, 6
   Comments: I'm not a blockchain developer. But, I can go up in skill and I can contribute to the code.     
   
 - [x00x0x00x](https://github.com/x00x0x00x)  
