@@ -25,8 +25,8 @@ This endpoint would send the timestamp of the last transaction along with its re
 
 It would be beneficial if the same mechanism allowed for aspiring full node operators to contact already existing full node operators with a request to download the entire, unconsolidated history.
 
-I imagine it would be beneficial if the full node operator had **the choice** to enable this, and to set an *optional* price at which he is willing to send such a large amount of data.
+I imagine it would be beneficial if the existing full node operator had **the choice** to enable this, and to set an *optional* price at which he is willing to send such a large amount of data.
 
-I imagine it would be beneficial if the full node operator had **the choice** to enable the same mechanism, but for consolidated blocks or consolidated blockfile ZIPs.
+I imagine it would be beneficial if the existing full node operator had **the choice** to enable the same mechanism, but for consolidated blocks or consolidated blockfile ZIPs.
 
 As an alternative to this, the aspiring full node operator can opt to fetch [the entire history from the nyzo.co website](https://nyzo.co/blockFiles) or to rely on community provided ZIP files, uploaded on a cloud-host such as MEGA
