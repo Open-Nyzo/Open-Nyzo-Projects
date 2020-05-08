@@ -1,6 +1,6 @@
 # Full node <-> light wallet
 
-What would help in terms of light wallets and being able to provide a full transaction history for addresses would be that a light wallet would be able to call an API with a *public_identifier* and get all relevant transactions.
+What would help in terms of light wallets and being able to provide a full transaction history for addresses would be that a light wallet would be able to call an API of a full node with a *public_identifier* and get all relevant transactions.
 
 Since, for some addresses, this would be a resource and bandwidth-heavy operation for the node providing the data, I propose to agree on a standard which is used both by light wallet developers and the Open-DB transactional data facilitators.
 
