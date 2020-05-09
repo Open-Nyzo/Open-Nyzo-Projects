@@ -28,20 +28,23 @@ Returns the total balance of the given address.
 
 Returns the transactions matching the given address, following a given block_height.
 Returns at most info from 720 blocks (the older ones)  
+Also returns the last scanned block height.
 
 This allows to query all transaction history for an address by successive calls, and go on from latest known state on a further run.
 
 ### listtransactions - (nyzo_address) (count=10) (from=0)
 
 Returns up to (count) most recent transactions skipping the first (from) transactions for address (nyzo_address).  
-If (nyzo_address) is not provided it'll return recent transactions from all addresses.
+If (nyzo_address) is not provided it'll return recent transactions from all addresses.  
+Also returns total number of transactions for that address.
 
-### counttransactions - (nyzo_address)
+### transactionscount - (nyzo_address)
 
-Returns the number of known transactions for (nyzo_address)
+Optional since listtransactinos also returns it.  
+Returns the number of known transactions for (nyzo_address).
 
 ### getblocksince - (block_height)
 
 Returns the full blocks (with all transactions) following a given block_height  
 Returns at most 10 blocks (the older ones)  
-Used by client apps to keep track and be notified of new tx for many addresses at once.
+Used by client apps to keep track and be notified of new tx for several addresses at once.
