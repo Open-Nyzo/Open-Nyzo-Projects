@@ -15,6 +15,10 @@ Following endpoint would help the light wallet display the correct amount of ava
 
 - request method = *amount_of_transactions* with 1 argument: *public_identifier*
 
+Following endpoint would help the light wallet display active cycle transactions (and other transaction types if needed) and enable voting for them through a light wallet:
+
+- request method = *transaction_type* with 1 argument: *transaction_type*
+
 Following endpoint would facilitate the delivery of transactions to the light wallet:
 
 - request method = *individual_transactions* with 2 arguments: *page* and *per_page*
