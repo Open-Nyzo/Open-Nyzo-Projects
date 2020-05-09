@@ -19,7 +19,7 @@ TODO
 
 Implementations: ...
 
-## websocket
+## websocket
 
 Usage: full js light wallets, web dapps.
 
@@ -30,7 +30,7 @@ TODO
 
 Implementations: ...
 
-## http(s) API
+## http(s) API
 
 endpoint is base API endoint /command_name/ , parameters can be sent via POST or GET
 
