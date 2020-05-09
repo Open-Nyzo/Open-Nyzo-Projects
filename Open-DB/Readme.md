@@ -18,7 +18,7 @@ Tools that read nyzoblocks and/or query the network and can feed historical and/
 
 4 - Development and Implementation
 
-Current structure is at open-db-structure.md
+Current structure is specified at https://github.com/Open-Nyzo/Open-Nyzo-Projects/blob/master/Open-DB/open-db-structure.md
 
 ## Contributions and Implementations
 
