@@ -4,7 +4,7 @@ MySql/MariaDB relational database was chosen.
 
 Since blocks and transactions use a fixed structure, this gives greater control on field types, storage and indices as well as more complex queries.
 
-The same strcuture can be used almost as-is with other sql engines, and should be almost directly translatable to a document oriented database if that was needed for a reason.
+The same structure can be used almost as-is with other sql engines, and should be almost directly translatable to a document oriented database if that was needed for a reason.
 
 # Structure
 
@@ -12,7 +12,8 @@ Credits go to Monk, Iyomisc, EggPool.
 
 ## Transactions
 
-`CREATE TABLE IF NOT EXISTS transactions (
+```
+CREATE TABLE IF NOT EXISTS transactions (
   height bigint(20) NOT NULL,
   canonical int(11) NOT NULL,
   timestamp bigint(20) NOT NULL,
@@ -29,7 +30,8 @@ Credits go to Monk, Iyomisc, EggPool.
   original_signature binary(64) DEFAULT NULL,
   PRIMARY KEY (height,canonical),
   KEY sender (sender(4)),
-  KEY recipient (recipient(4)))`
+  KEY recipient (recipient(4)))
+```
 
 Stores the individual transactions.  
 - `height` is the matching block height
@@ -47,7 +49,8 @@ Some implementations may not use these fields and leave them Null
 
 The blocks themselve.
 
-`CREATE TABLE IF NOT EXISTS blocks (
+```
+CREATE TABLE IF NOT EXISTS blocks (
         chain_version SMALLINT SIGNED NOT NULL,
         height BIGINT SIGNED NOT NULL,
         hash BINARY(32) NOT NULL,
@@ -59,18 +62,21 @@ The blocks themselve.
         balance_list_hash BINARY(32) NOT NULL,
         verifier BINARY(32) NOT NULL,
         signature BINARY(64) NOT NULL,
-        PRIMARY KEY (height))`
+        PRIMARY KEY (height))
+```
 
 ## Cycle events
 
 Stores all cycle changes.  
 
-`CREATE TABLE IF NOT EXISTS cycle_events (
+```
+CREATE TABLE IF NOT EXISTS cycle_events (
   height bigint(20) NOT NULL,
   identifier binary(32) NOT NULL,
   joined tinyint(1) NOT NULL,
   PRIMARY KEY (height,identifier)
-)`
+)
+```
 
 joined is `true` is `identifier` joined the cycle, `false` if it left it.
 
