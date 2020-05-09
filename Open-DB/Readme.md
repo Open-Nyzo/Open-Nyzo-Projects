@@ -29,7 +29,7 @@ Current structure is specified at https://github.com/Open-Nyzo/Open-Nyzo-Project
   Not public nor released atm, release as open source is planned in the future.
 - Iyomisc: prototype of a python feeder and tracker, able to read historical nyzoblocks then stay sync with the live chain, storing chain data into the open db.  
   Used as data source for the explorer at https://nyzo.today/explorer/.
-  Explorer is public, code was not release as for now, may be open sourced later on.
+  Explorer is public, code was not released as for now, may be open sourced later on.
 
 
 ## Contributors
