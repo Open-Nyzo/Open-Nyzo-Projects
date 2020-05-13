@@ -19,18 +19,22 @@ CREATE TABLE IF NOT EXISTS transactions (
   timestamp bigint(20) NOT NULL,
   type tinyint(4) NOT NULL,
   sender binary(32) DEFAULT NULL,
-  recipient binary(32) NOT NULL,
+  recipient binary(32) DEFAULT NULL,
   data binary(32) DEFAULT NULL,
-  amount bigint(20) NOT NULL,
-  amount_after_fees bigint(20) NOT NULL,
+  amount bigint(20) DEFAULT NULL,
+  amount_after_fees bigint(20) DEFAULT NULL,
   sender_balance bigint(20) DEFAULT NULL,
-  recipient_balance bigint(20) NOT NULL,
+  recipient_balance bigint(20) DEFAULT NULL,
   signature binary(64) DEFAULT NULL,
   vote tinyint(3) unsigned DEFAULT NULL,
   original_signature binary(64) DEFAULT NULL,
   PRIMARY KEY (height,canonical),
   KEY sender (sender(4)),
-  KEY recipient (recipient(4)))
+  KEY recipient (recipient(4)),
+  KEY timestamp (timestamp),
+  KEY signature (signature(4)),
+  KEY original_signature (original_signature(4)),
+  KEY type (type))
 ```
 
 Stores the individual transactions.  
@@ -40,6 +44,10 @@ Stores the individual transactions.
 - Amounts are stored as int, that is amount of micronyzos.
 - `sender_balance` and `recipient_balance` are the balances after the transaction is applied.
 - `vote` and `original_signature` are null unless transaction type is 4
+
+Cycle transactions:
+- V1 blockchain: cycle transactions are tracked off chain, stored in DB once accepted (once they appeared in a block)
+- V2 blockchain: cycle transactions are stored twice, on creation, with sender_balance and recipient_balance both set to NULL, then again on acceptance with the correct balances
 
 > Note: Sender and recipient balance denormalization at transaction level ease up balance calculations, without requiring full balance list to be stored every block.  
 Some implementations may not use these fields and leave them Null
@@ -51,18 +59,20 @@ The blocks themselve.
 
 ```
 CREATE TABLE IF NOT EXISTS blocks (
-        chain_version SMALLINT SIGNED NOT NULL,
-        height BIGINT SIGNED NOT NULL,
-        hash BINARY(32) NOT NULL,
-        previous_hash BINARY(32) NOT NULL,
-        cycle_length INT SIGNED NOT NULL,
-        start BIGINT SIGNED NOT NULL,
-        verification BIGINT SIGNED NOT NULL,
-        transaction_count INT SIGNED NOT NULL,
-        balance_list_hash BINARY(32) NOT NULL,
-        verifier BINARY(32) NOT NULL,
-        signature BINARY(64) NOT NULL,
-        PRIMARY KEY (height))
+  chain_version SMALLINT SIGNED NOT NULL,
+  height BIGINT SIGNED NOT NULL,
+  hash BINARY(32) NOT NULL,
+  previous_hash BINARY(32) NOT NULL,
+  cycle_length INT SIGNED NOT NULL,
+  start BIGINT SIGNED NOT NULL,
+  verification BIGINT SIGNED NOT NULL,
+  transaction_count INT SIGNED NOT NULL,
+  balance_list_hash BINARY(32) NOT NULL,
+  verifier BINARY(32) NOT NULL,
+  signature BINARY(64) NOT NULL,
+  PRIMARY KEY (height),
+  KEY hash (hash(4)),
+  KEY signature (signature(4)))
 ```
 
 ## Cycle events
@@ -79,11 +89,3 @@ CREATE TABLE IF NOT EXISTS cycle_events (
 ```
 
 joined is `true` is `identifier` joined the cycle, `false` if it left it.
-
-
-## Optional indices
-
-Structure above contains the minimal indices needed for a working and minimal database.
-
-More indices can be added to accelerate common requests.  
-These are left to the requester goodwill.
