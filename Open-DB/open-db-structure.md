@@ -89,3 +89,36 @@ CREATE TABLE IF NOT EXISTS cycle_events (
 ```
 
 joined is `true` is `identifier` joined the cycle, `false` if it left it.
+
+## Node status
+
+Node status information.
+
+```
+CREATE TABLE node_status1 (
+  identifier binary(32) NOT NULL,
+  timestamp bigint(20) NOT NULL,
+  ip binary(4) NOT NULL,
+  nickname varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  version int(11) NOT NULL,
+  mesh_total int(11) NOT NULL,
+  mesh_cycle int(11) NOT NULL,
+  cycle_length int(11) NOT NULL,
+  transactions int(11) NOT NULL,
+  retention_edge bigint(20) NOT NULL,
+  trailing_edge bigint(20) NOT NULL,
+  frozen_edge bigint(20) NOT NULL,
+  open_edge bigint(20) NOT NULL,
+  blocks_transmitted bigint(20) NOT NULL,
+  blocks_created bigint(20) NOT NULL,
+  vote_stats varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL,
+  last_join_height bigint(20) NOT NULL,
+  last_removal_height bigint(20) NOT NULL,
+  receiving_udp tinyint(4) NOT NULL,
+  PRIMARY KEY (ip,identifier,nickname)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
+
+Observe the CHARSET specifications for this table, a default table creation will not work, as default "utf8" as implemented by MySQL is not compatible with the emojis some people use in their verifier nicknames.
+
+The table is primkeyed by ip, identifier, nickname, so any change of the IP or nickname will leave back a historical data entry in the table in case somebody wants to know historical IPs or nicks for individual node identifiers. 
