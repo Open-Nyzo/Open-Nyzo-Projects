@@ -60,3 +60,11 @@ Please issue a PR to add yourself.
   Comments: I have more of a global view than a specialist one. I specially like the design stage.   
 My goal here is to aggregate the devs goodwill and provide them with a nice place where they feel home, so we can build open nyzo ecosystem in a non nonsense and collaborative way.     
   
+- [Cryptic Monk](https://github.com/cryptic-monk)  
+  Twitter @cryptic_monk Discord @Monk#4056
+
+  Languages: Go, Python, PHP and about 20 others that nobody cares about any more
+  Experience: 20 years in digital, mostly as an information architect, product or project manager and team leader, always kept coding because I simply love doing it.
+  Stages: 1 - 6  
+  Comments: I love Nyzo for the incredibly competent and consistent core development. Its technological innovations are worth exploring and the Nyzo community is nerdy and welcoming in a way that many "just for the money" projects lack. For as long as I have time, I'll continue building out my Go implementation of the Nyzo protocol and am looking forward to see it being brought to actual use as a data feeder node for nyzo.today.
+  
