@@ -1,0 +1,306 @@
+swagger: "2.0"
+info:
+  description: "This is the Open Nyzo Wallet Server api documentation\n Addresses should be given as hex, raw hex, dashed hex, or id__ nyzostring\nAddresses will be returned as raw hex\nAll nyzo amounts are micronyzos integers\nAll timestamps are miliseconds integers"
+  version: "1.0.0"
+  title: "Open Nyzo Wallet Server API"
+  license:
+    name: "MIT"
+    url: "https://github.com/Open-Nyzo/Open-Nyzo-Projects/blob/master/LICENSE"
+host: "nyzo.today"
+basePath: "/api"
+tags:
+- name: "Commands"
+  description: "Commands of the Open Nyzo Wallet Server protocol"
+  externalDocs:
+    description: "Find out more"
+    url: "https://github.com/Open-Nyzo/Open-Nyzo-Projects/blob/master/Wallet_servers/Commands.md"
+schemes:
+- "https"
+- "http"
+paths:
+  /network/transactionscount/{delay}:
+    get:
+      tags:
+      - "Commands"
+      summary: "Returns the number of transactions in the network during last {delay} seconds"
+      description: "{delay} needs to be given in seconds as an integer"
+      operationId: "networktransactionscount"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "delay"
+        in: "path"
+        description: "The delay in seconds"
+        required: true
+        type: "integer"
+        default: 3600
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "integer"
+
+  /transactionscount/{address}:
+    get:
+      tags:
+      - "Commands"
+      summary: "Returns the number of transactions related to {address}"
+      description: "{address} can be Nyzo address, raw hexadecimal or id__ nyzostring"
+      operationId: "transactionscount"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "address"
+        in: "path"
+        description: "The nyzo address to query"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "integer"
+
+        "400":
+          description: "Invalid address"
+          
+  /getbalancebyaddress/{address}:
+    get:
+      tags:
+      - "Commands"
+      summary: "Returns the actual balance of {address}"
+      description: "{address} can be Nyzo address, raw hexadecimal or id__ nyzostring. Balance is returned as micronyzos."
+      operationId: "getbalancebyaddress"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "address"
+        in: "path"
+        description: "The nyzo address to query"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "integer"
+
+        "400":
+          description: "Invalid address"
+  
+  /listtransactions/{address}/{count}/{skip}:
+    get:
+      tags:
+      - "Commands"
+      summary: "Returns {count} most recent transactions concerning {address} after skipping {skip}"
+      description: "{address} can be Nyzo address, raw hexadecimal or id__ nyzostring"
+      operationId: "listtransactions"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "address"
+        in: "path"
+        description: "The nyzo address to query"
+        required: true
+        type: "string"
+      - name: "count"
+        in: "path"
+        description: "the number of transactions to return"
+        required: true
+        type: "integer"
+        default: 10
+      - name: "skip"
+        in: "path"
+        description: "The number of transactions to skip"
+        required: true
+        type: "integer"
+        default: 0
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/TransactionsAnswer"
+
+        "400":
+          description: "Invalid address, count or skip"
+          
+  /getblocksince/{height}:
+    get:
+      tags:
+      - "Commands"
+      summary: "Returns blocks strictly following {height}"
+      description: ""
+      operationId: "getblocksince"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "height"
+        in: "path"
+        description: "The height before the first block to be returned"
+        required: true
+        type: "integer"
+        default: 0
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/BlocksAnswer"
+
+        "400":
+          description: "Invalid height"
+    
+    
+  /getaddresssince/{height}/{address}:
+    get:
+      tags:
+      - "Commands"
+      summary: "Returns all transactions concerning {address} after block {height}"
+      description: "{address} can be Nyzo address, raw hexadecimal or id__ nyzostring. Returns at most info from 720 blocks (the older ones). Transactions are sorted by height, cannonical asc - the first will be the older"
+      operationId: "getaddresssince"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "height"
+        in: "path"
+        description: "The block height to search from"
+        required: true
+        type: "integer"
+      - name: "address"
+        in: "path"
+        description: "The nyzo address to query"
+        required: true
+        type: "string"
+        
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/TransactionsAnswer"
+
+        "400":
+          description: "Invalid address or height"
+          
+  /forwardtransaction/{tx__}:
+    get:
+      tags:
+      - "Commands"
+      summary: "Forwards a signed transaction to be included in the chain. Returns error or the inclusion block. User has to check if the transaction as been included"
+      description: ""
+      operationId: "forwardtransaction"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "tx__"
+        in: "path"
+        description: "The signed transaction to forward"
+        required: true
+        type: "string"
+        
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ForwardAnswer"
+
+        "400":
+          description: "Invalid transaction"
+definitions:
+  Block:
+    type: object
+    properties:
+      data_type: 
+        type: string
+        default: "block"
+      chain_version:
+        type: integer
+      height:
+        type: integer  
+      hash: 
+        type: string
+      previous_hash: 
+        type: string
+      cycle_length:
+        type: integer
+      start_timestamp:
+        type: integer
+      verification_timestamp:
+        type: integer
+      transaction_count:
+        type: integer
+      transactions: 
+        $ref: "#/definitions/TransactionsList"
+      balance_list_hash: 
+        type: string
+      verifier: 
+        type: string
+      signature: 
+        type: string
+  
+  BlocksList:
+    type: "array"
+    items:
+      $ref: "#/definitions/Block"
+  
+  BlocksAnswer:
+    type: "object"
+    properties:
+      last_height_checked:
+        type: "integer"
+      blocks:
+        $ref: "#/definitions/BlocksList"
+  
+  Transaction:
+    type: object
+    properties:
+      data_type: 
+        type: string
+        default: "tx"
+      height:
+        type: integer
+      canonical: 
+        type: integer
+      timestamp:
+        type: integer
+      type:
+        type: integer
+      sender: 
+        type: string
+      recipient:
+        type: string
+      data:
+        type: string
+      amount:
+        type: integer
+      amount_after_fees:
+        type: integer
+      signature: 
+        type: string
+      vote: 
+        type: boolean
+        default: null
+      original_signature:
+        type: string
+        default: null
+        
+  TransactionsList:
+    type: "array"
+    items:
+      $ref: "#/definitions/Transaction"
+  
+  TransactionsAnswer:
+    type: "object"
+    properties:
+      last_height_checked:
+        type: "integer"
+      transactions:
+        $ref: "#/definitions/TransactionsList"
+          
+  ForwardAnswer:
+    type: "object"
+    properties:
+      status: 
+        type: "string"
+      height: 
+        type: "integer"
+        default: -1
+  
